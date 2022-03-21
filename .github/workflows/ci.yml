@@ -1,0 +1,31 @@
+name: continuous-integration
+
+on:
+  push:
+    paths:
+      - "configuratin/**"
+      - "terraform/**"
+    branches-ignore:
+      - main
+
+env:
+  GITHUB_APP_PEM_FILE: ${{ secrets.TFM_GITHUB_APP_PEM_FILE }}
+  GITHUB_APP_ID: ${{ secrets.TFM_GITHUB_APP_ID }}
+  GITHUB_APP_INSTALLATION_ID: ${{ secrets.TFM_GITHUB_APP_INSTALLATION_ID }}
+
+  CICD_AUTOMATION_AWS_ACCESS_KEY_ID: ${{ secrets.CICD_AUTOMATION_AWS_ACCESS_KEY_ID }}
+  CICD_AUTOMATION_AWS_SECRET_ACCESS_KEY: ${{ secrets.CICD_AUTOMATION_AWS_SECRET_ACCESS_KEY }}
+
+  TF_VAR_aws_account_id: ${{ secrets.ITC_AWS_ACCOUNT_ID }}
+  TF_VAR_aws_external_id: ${{ secrets.ITC_AWS_IAM_EXTERNAL_ID }}
+
+jobs:
+  ## DO NOT REMOVE ##
+
+  # CALL WORKFLOW tfm-validate-plan
+  tfm-validate:
+    uses: indigo-tangerine/itc-aws-base-cfg/.github/workflows/tfm-validate.yml@main
+    with:
+      # it should be possible to use env vars here - this is a bug in GHAs
+      terraform-dir: terraform # ${{ env.TFM_DIR }}
+      use-backend: "false"
