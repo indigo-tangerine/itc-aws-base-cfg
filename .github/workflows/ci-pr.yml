@@ -1,0 +1,52 @@
+name: feature continuous-integration
+
+on:
+  pull_request:
+    paths:
+      - "configuratin/**"
+      - "terraform/**"
+    branches:
+      - main
+
+env:
+  GITHUB_APP_PEM_FILE: ${{ secrets.TFM_GITHUB_APP_PEM_FILE }}
+  GITHUB_APP_ID: ${{ secrets.TFM_GITHUB_APP_ID }}
+  GITHUB_APP_INSTALLATION_ID: ${{ secrets.TFM_GITHUB_APP_INSTALLATION_ID }}
+
+  TFM_DIR: "terraform"
+  CFG_DIR: "configuration"
+
+jobs:
+  ## DO NOT REMOVE ##
+
+  # CALL WORKFLOW tfm-validate-plan code validation and lint
+  validate-iac:
+    uses: indigo-tangerine/shared-workflows/.github/workflows/tfm-validate.yml@main
+    with:
+      terraform-dir: terraform
+
+  # CALL WORKFLOW tfm-security tfsec scan
+  security-scan:
+    uses: indigo-tangerine/shared-workflows/.github/workflows/tfm-security.yml@main
+    with:
+      terraform-dir: terraform
+
+  # CALL WORKFLOW tfm-docs update terraform documentation
+  tfm-docs:
+    uses: indigo-tangerine/shared-workflows/.github/workflows/tfm-docs.yml@main
+    with:
+      working-dir: "terraform"
+
+  # CALL WORKFLOW tfm-plan
+  tfm-plan:
+    uses: indigo-tangerine/shared-workflows/.github/workflows/tfm-plan.yml@main
+    needs: [validate-iac, security-scan]
+    with:
+      configuration-dir: configuration
+      terraform-dir: terraform
+      aws-region: "eu-west-1"
+    secrets:
+      aws-access-key-id: ${{ secrets.CICD_AUTOMATION_AWS_ACCESS_KEY_ID }}
+      aws-secret-access-key: ${{ secrets.CICD_AUTOMATION_AWS_SECRET_ACCESS_KEY }}
+      aws-cicd-automation-role-external-id: ${{ secrets.ITC_AWS_IAM_EXTERNAL_ID }}
+      aws-cicd-automation-github-role: ${{ secrets.CICD_AUTOMATION_GITHUB_ACTIONS_ROLE }}
