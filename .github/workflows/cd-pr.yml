@@ -1,0 +1,32 @@
+name: continuous-deployment
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  GITHUB_APP_PEM_FILE: ${{ secrets.TFM_GITHUB_APP_PEM_FILE }}
+  GITHUB_APP_ID: ${{ secrets.TFM_GITHUB_APP_ID }}
+  GITHUB_APP_INSTALLATION_ID: ${{ secrets.TFM_GITHUB_APP_INSTALLATION_ID }}
+
+  TFM_DIR: "terraform"
+  CFG_DIR: "configuration"
+
+jobs:
+  ## DO NOT REMOVE ##
+  tag-release-changelog:
+    uses: indigo-tangerine/shared-workflows/.github/workflows/tag-release-changelog.yml@main
+  # CALL WORKFLOW tfm-plan-apply
+  tfm-plan-apply:
+    uses: indigo-tangerine/shared-workflows/.github/workflows/tfm-plan-apply.yml@main
+    with:
+      configuration-dir: configuration
+      terraform-dir: terraform
+      aws-region: "eu-west-1"
+      enable-semver: true
+    secrets:
+      aws-access-key-id: ${{ secrets.CICD_AUTOMATION_AWS_ACCESS_KEY_ID }}
+      aws-secret-access-key: ${{ secrets.CICD_AUTOMATION_AWS_SECRET_ACCESS_KEY }}
+      aws-cicd-automation-role-external-id: ${{ secrets.ITC_AWS_IAM_EXTERNAL_ID }}
+      aws-cicd-automation-github-role: ${{ secrets.CICD_AUTOMATION_GITHUB_ACTIONS_ROLE }}
