@@ -1,9 +1,9 @@
-name: feature continuous-integration
+name: continuous-integration feature branch
 
 on:
   push:
     paths:
-      - "configuratin/**"
+      - "configuration/**"
       - "terraform/**"
     branches-ignore:
       - main

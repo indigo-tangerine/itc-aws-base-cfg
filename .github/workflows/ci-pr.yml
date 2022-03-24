@@ -1,9 +1,9 @@
-name: feature continuous-integration
+name: continuous-integration pull-request
 
 on:
   pull_request:
     paths:
-      - "configuratin/**"
+      - "configuration/**"
       - "terraform/**"
     branches:
       - main
@@ -34,6 +34,7 @@ jobs:
   # CALL WORKFLOW tfm-docs update terraform documentation
   tfm-docs:
     uses: indigo-tangerine/shared-workflows/.github/workflows/tfm-docs.yml@main
+    needs: [validate-iac, security-scan]
     with:
       working-dir: "terraform"
 
