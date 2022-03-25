@@ -20,6 +20,7 @@ jobs:
   # CALL WORKFLOW tfm-plan-apply
   tfm-plan-apply:
     uses: indigo-tangerine/shared-workflows/.github/workflows/tfm-plan-apply.yml@main
+    needs: [tag-release-changelog]
     with:
       configuration-dir: configuration
       terraform-dir: terraform
