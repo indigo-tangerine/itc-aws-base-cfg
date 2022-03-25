@@ -11,4 +11,5 @@ locals {
 
   cicd_automation_role_name = "${var.client}-cicd-automation"
   github_actions_role_name  = "${var.client}-github-actions"
+
 }
