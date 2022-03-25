@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## [v0.2.0](https://github.com/indigo-tangerine/itc-aws-base-cfg/releases/tag/v0.2.0) - 2022-03-25 14:44:43
+
+*No description*
+
+### Feature
+
+- general:
+  - bump ([0c20d6b](https://github.com/indigo-tangerine/itc-aws-base-cfg/commit/0c20d6b55f3155eea5db3331bac77ec5a8e09d93)) ([#4](https://github.com/indigo-tangerine/itc-aws-base-cfg/pull/4))
+
+### Bug Fixes
+
+- general:
+  - bump ([3e7c737](https://github.com/indigo-tangerine/itc-aws-base-cfg/commit/3e7c737af06c5d05f13a9e1529fd30f59abc5df2)) ([#4](https://github.com/indigo-tangerine/itc-aws-base-cfg/pull/4))
+
 ## [v0.1.0](https://github.com/indigo-tangerine/itc-aws-base-cfg/releases/tag/v0.1.0) - 2022-03-25 09:01:15
 
 *No description*
