@@ -25,6 +25,7 @@ jobs:
       terraform-dir: terraform
       aws-region: "eu-west-1"
       enable-semver: true
+      use_v_prefix: true
     secrets:
       aws-access-key-id: ${{ secrets.CICD_AUTOMATION_AWS_ACCESS_KEY_ID }}
       aws-secret-access-key: ${{ secrets.CICD_AUTOMATION_AWS_SECRET_ACCESS_KEY }}
