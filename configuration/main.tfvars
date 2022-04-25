@@ -1,3 +1,4 @@
+# Terraform variables
 stage           = "xxx"
 client          = "itc"
 service_version = "<service-version>"
