@@ -15,10 +15,14 @@ env:
 
 jobs:
   ## DO NOT REMOVE ##
+  # CALL WORKFLOW bridgecrew
   bridgecrew-scan:
     uses: indigo-tangerine/shared-workflows/.github/workflows/bridgecrew.yml@main
+
+  # CALL WORKFLOW tag-release-changelog
   tag-release-changelog:
     uses: indigo-tangerine/shared-workflows/.github/workflows/tag-release-changelog.yml@main
+
   # CALL WORKFLOW tfm-plan-apply
   tfm-plan-apply:
     uses: indigo-tangerine/shared-workflows/.github/workflows/tfm-plan-apply.yml@main

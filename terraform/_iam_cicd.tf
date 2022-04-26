@@ -40,7 +40,7 @@ resource "aws_iam_role" "cicd_automation" {
         Sid    = ""
         Principal = {
           AWS = [
-            "arn:aws:iam::${data.aws_caller_identity.current.account_id}:user/${local.cicd_automation_role_name}",
+            "arn:aws:iam::${data.aws_caller_identity.current.account_id}:user/${local.cicd_automation_user_name}",
             "arn:aws:sts::${data.aws_caller_identity.current.account_id}:assumed-role/${local.github_actions_role_name}/${var.github_actions_session_name}"
           ]
         }
