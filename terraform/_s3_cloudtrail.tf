@@ -3,10 +3,10 @@
 #tfsec:ignore:aws-s3-enable-bucket-logging tfsec:ignore:aws-s3-enable-versioning tfsec:ignore:aws-s3-enable-bucket-encryption tfsec:ignore:aws-s3-encryption-customer-key
 resource "aws_s3_bucket" "cloudtrail" {
 
-  bucket = "tfm-state-${data.aws_caller_identity.current.account_id}"
+  bucket = "cloudtrail-${data.aws_caller_identity.current.account_id}"
 
   tags = {
-    Name = "tfm-state-${data.aws_caller_identity.current.account_id}"
+    Name = "cloudtrail-${data.aws_caller_identity.current.account_id}"
   }
 }
 
