@@ -51,7 +51,7 @@ data "aws_iam_policy_document" "cloudtrail_bucket_policy" {
     sid       = "AWSCloudTrailWrite"
     effect    = "Allow"
     actions   = ["s3:PutObject"]
-    resources = ["${aws_s3_bucket.cloudtrail.arn}/AWSLogs/${data.aws_caller_identity.current.account_id}/*"]
+    resources = ["${aws_s3_bucket.cloudtrail.arn}/*"]
     principals {
       type        = "Service"
       identifiers = ["cloudtrail.amazonaws.com"]
@@ -60,6 +60,11 @@ data "aws_iam_policy_document" "cloudtrail_bucket_policy" {
       test     = "StringEquals"
       variable = "s3:x-amz-acl"
       values   = ["bucket-owner-full-control"]
+    }
+    condition {
+      test     = "StringEquals"
+      variable = "aws:SourceArn"
+      values   = [aws_cloudtrail.main.arn]
     }
   }
 
