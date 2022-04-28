@@ -16,15 +16,3 @@ resource "aws_cloudwatch_log_group" "cloudtrail" {
   retention_in_days = 3
 }
 
-resource "aws_cloudwatch_log_metric_filter" "cloudtrail_unauthorized_api_calls_metric" {
-  name    = "unauthorized_api_calls_metric"
-  pattern = "{($.errorCode = \"*UnauthorizedOperation\") || ($.errorCode = \"AccessDenied*\")}"
-
-  log_group_name = aws_cloudwatch_log_group.cloudtrail.name
-
-  metric_transformation {
-    name      = "unauthorized_api_calls_metric"
-    namespace = "CISBenchmark"
-    value     = "1"
-  }
-}
