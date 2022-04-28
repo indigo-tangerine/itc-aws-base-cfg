@@ -34,7 +34,7 @@ jobs:
 
     # CALL WORKFLOW changelog
   update-changelog:
-    needs: [tag-releases]
+    needs: [tag-release]
     uses: indigo-tangerine/shared-workflows/.github/workflows/update-changelog.yml@main
     secrets:
       access_token: ${{ secrets.CICD_AUTOMATION_PAT }}
