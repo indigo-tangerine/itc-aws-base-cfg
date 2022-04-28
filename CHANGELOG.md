@@ -1,5 +1,64 @@
 # CHANGELOG
 
+## [v0.8.0](https://github.com/indigo-tangerine/itc-aws-base-cfg/releases/tag/v0.8.0) - 2022-04-28 18:57:40
+
+*No description*
+
+### Feature
+
+- general:
+  - add compliance rules ([ce67bdf](https://github.com/indigo-tangerine/itc-aws-base-cfg/commit/ce67bdfa6150101e083b50f2af217c0961f6e0c4)) ([#9](https://github.com/indigo-tangerine/itc-aws-base-cfg/pull/9))
+  - add compliance rules ([e1b422b](https://github.com/indigo-tangerine/itc-aws-base-cfg/commit/e1b422b05a7dac5cf28d483444d64e35f7a19bec)) ([#9](https://github.com/indigo-tangerine/itc-aws-base-cfg/pull/9))
+
+### Bug Fixes
+
+- general:
+  - fix workflow ([1c8b880](https://github.com/indigo-tangerine/itc-aws-base-cfg/commit/1c8b880d0515c1540f2b2e997d3ed718de2c24b5))
+
+## [v0.8.0-beta.1](https://github.com/indigo-tangerine/itc-aws-base-cfg/releases/tag/v0.8.0-beta.1) - 2022-04-27 17:39:11
+
+*No description*
+
+## [v0.7.0](https://github.com/indigo-tangerine/itc-aws-base-cfg/releases/tag/v0.7.0) - 2022-04-26 22:01:14
+
+*No description*
+
+### Feature
+
+- general:
+  - add cloudtrail & log group ([4244f10](https://github.com/indigo-tangerine/itc-aws-base-cfg/commit/4244f10515b7e56ebf26e2fd033a1227b449dbe4)) ([#8](https://github.com/indigo-tangerine/itc-aws-base-cfg/pull/8))
+  - add cloudtrail & log group ([53d517e](https://github.com/indigo-tangerine/itc-aws-base-cfg/commit/53d517edcbf9946d59239031450940791e13a6d0)) ([#8](https://github.com/indigo-tangerine/itc-aws-base-cfg/pull/8))
+
+### Bug Fixes
+
+- general:
+  - workflow ([cb1f83a](https://github.com/indigo-tangerine/itc-aws-base-cfg/commit/cb1f83a46e2d7c1a6419a02759838f45cfa683ef))
+  - add PAT ([2b4d737](https://github.com/indigo-tangerine/itc-aws-base-cfg/commit/2b4d7375fab6ff8c3f1572bafa7580b38728db35))
+
+## [v0.6.0](https://github.com/indigo-tangerine/itc-aws-base-cfg/releases/tag/v0.6.0) - 2022-04-26 20:17:16
+
+*No description*
+
+### Feature
+
+- general:
+  - add cloudtrail ([0594d65](https://github.com/indigo-tangerine/itc-aws-base-cfg/commit/0594d658dd6ff2c42d5f2bd0903e7fb9e162b46e)) ([#7](https://github.com/indigo-tangerine/itc-aws-base-cfg/pull/7))
+  - add cloudtrail ([64906dd](https://github.com/indigo-tangerine/itc-aws-base-cfg/commit/64906dd6ed31c826bde8d84cf378e9d566144a48)) ([#7](https://github.com/indigo-tangerine/itc-aws-base-cfg/pull/7))
+
+## [v0.5.0](https://github.com/indigo-tangerine/itc-aws-base-cfg/releases/tag/v0.5.0) - 2022-04-25 21:29:53
+
+*No description*
+
+### Feature
+
+- general:
+  - add cloudtrail log bucket ([2cd5f8c](https://github.com/indigo-tangerine/itc-aws-base-cfg/commit/2cd5f8ca9ab55585181e46aa39d2840f77e39e73)) ([#6](https://github.com/indigo-tangerine/itc-aws-base-cfg/pull/6))
+  - add cloudtrail log bucket ([1bd8dd9](https://github.com/indigo-tangerine/itc-aws-base-cfg/commit/1bd8dd90e8635d9e256f5566f643ba3c35b98d47)) ([#6](https://github.com/indigo-tangerine/itc-aws-base-cfg/pull/6))
+
+## [v0.4.0](https://github.com/indigo-tangerine/itc-aws-base-cfg/releases/tag/v0.4.0) - 2022-04-04 19:27:47
+
+*No description*
+
 ## [v0.3.0](https://github.com/indigo-tangerine/itc-aws-base-cfg/releases/tag/v0.3.0) - 2022-03-25 18:53:33
 
 *No description*
