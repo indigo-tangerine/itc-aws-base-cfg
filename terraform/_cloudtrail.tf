@@ -7,7 +7,13 @@ resource "aws_cloudtrail" "main" {
   cloud_watch_logs_role_arn     = aws_iam_role.cloudtrail_logging.arn
   is_multi_region_trail         = false
   is_organization_trail         = true
-  enable_log_file_validation    = false
+  enable_log_file_validation    = true
+  event_selector {
+    exclude_management_event_sources = ["kms.amazonaws.com", "rdsdata.amazonaws.com"]
+    include_management_events        = true
+    read_write_type                  = "WriteOnly" # "ReadOnly", "All"
+  }
+
 }
 
 #tfsec:ignore:aws-cloudwatch-log-group-customer-key 
