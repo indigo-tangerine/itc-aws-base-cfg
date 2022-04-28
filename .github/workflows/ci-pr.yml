@@ -1,4 +1,4 @@
-name: continuous-integration pull-request
+name: continuous-integration
 
 on:
   pull_request:
@@ -17,8 +17,6 @@ env:
   CFG_DIR: "configuration"
 
 jobs:
-  ## DO NOT REMOVE ##
-
   # CALL WORKFLOW tfm-validate-plan code validation and lint
   validate-iac:
     uses: indigo-tangerine/shared-workflows/.github/workflows/tfm-validate.yml@main
@@ -52,8 +50,7 @@ jobs:
       aws-cicd-automation-role-external-id: ${{ secrets.ITC_AWS_IAM_EXTERNAL_ID }}
       aws-cicd-automation-github-role: ${{ secrets.CICD_AUTOMATION_GITHUB_ACTIONS_ROLE }}
 
-  # # CALL WORKFLOW changelog
-  # update-changelog:
-  #   uses: indigo-tangerine/shared-workflows/.github/workflows/update-changelog.yml@main
-  #   secrets:
-  #     access_token: ${{ secrets.CICD_AUTOMATION_PAT }}
+  # CALL WORKFLOW bridgecrew
+  bridgecrew-scan:
+    needs: [tfm-plan]
+    uses: indigo-tangerine/shared-workflows/.github/workflows/bridgecrew.yml@main

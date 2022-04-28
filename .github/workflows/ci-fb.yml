@@ -24,8 +24,6 @@ env:
   CFG_DIR: "configuration"
 
 jobs:
-  ## DO NOT REMOVE ##
-
   # CALL WORKFLOW tfm-validate-plan code validation and lint
   validate-iac:
     uses: indigo-tangerine/shared-workflows/.github/workflows/tfm-validate.yml@main

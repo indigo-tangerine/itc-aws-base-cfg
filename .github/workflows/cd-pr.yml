@@ -14,25 +14,9 @@ env:
   CFG_DIR: "configuration"
 
 jobs:
-  ## DO NOT REMOVE ##
-  # CALL WORKFLOW bridgecrew
-  bridgecrew-scan:
-    uses: indigo-tangerine/shared-workflows/.github/workflows/bridgecrew.yml@main
-
-  # CALL WORKFLOW tag-release
-  tag-release:
-    uses: indigo-tangerine/shared-workflows/.github/workflows/tag-release.yml@main
-
-    # CALL WORKFLOW changelog
-  update-changelog:
-    uses: indigo-tangerine/shared-workflows/.github/workflows/update-changelog.yml@main
-    secrets:
-      access_token: ${{ secrets.CICD_AUTOMATION_PAT }}
-
   # CALL WORKFLOW tfm-plan-apply
   tfm-plan-apply:
     uses: indigo-tangerine/shared-workflows/.github/workflows/tfm-plan-apply.yml@main
-    needs: [tag-release, bridgecrew-scan, update-changelog]
     with:
       configuration-dir: configuration
       terraform-dir: terraform
@@ -42,3 +26,15 @@ jobs:
       aws-secret-access-key: ${{ secrets.CICD_AUTOMATION_AWS_SECRET_ACCESS_KEY }}
       aws-cicd-automation-role-external-id: ${{ secrets.ITC_AWS_IAM_EXTERNAL_ID }}
       aws-cicd-automation-github-role: ${{ secrets.CICD_AUTOMATION_GITHUB_ACTIONS_ROLE }}
+
+  # CALL WORKFLOW tag-release
+  tag-release:
+    needs: [tfm-plan-apply]
+    uses: indigo-tangerine/shared-workflows/.github/workflows/tag-release.yml@main
+
+    # CALL WORKFLOW changelog
+  update-changelog:
+    needs: [tag-releases]
+    uses: indigo-tangerine/shared-workflows/.github/workflows/update-changelog.yml@main
+    secrets:
+      access_token: ${{ secrets.CICD_AUTOMATION_PAT }}
