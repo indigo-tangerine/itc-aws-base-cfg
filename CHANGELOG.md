@@ -1,5 +1,38 @@
 # CHANGELOG
 
+## [v0.13.0](https://github.com/indigo-tangerine/itc-aws-base-cfg/releases/tag/v0.13.0) - 2022-04-28 20:19:44
+
+*No description*
+
+### Bug Fixes
+
+- general:
+  - cloudtrail ([17175f3](https://github.com/indigo-tangerine/itc-aws-base-cfg/commit/17175f395dc6435b89e3e59581ab243be848084a)) ([#13](https://github.com/indigo-tangerine/itc-aws-base-cfg/pull/13))
+
+## [v0.12.0](https://github.com/indigo-tangerine/itc-aws-base-cfg/releases/tag/v0.12.0) - 2022-04-28 19:53:50
+
+*No description*
+
+### Feature
+
+- general:
+  - compliance ([31ec302](https://github.com/indigo-tangerine/itc-aws-base-cfg/commit/31ec302b34b160e33e0bbe0371f5c5a93f811ecf)) ([#12](https://github.com/indigo-tangerine/itc-aws-base-cfg/pull/12))
+
+## [v0.11.0](https://github.com/indigo-tangerine/itc-aws-base-cfg/releases/tag/v0.11.0) - 2022-04-28 19:32:37
+
+*No description*
+
+### Feature
+
+- general:
+  - compliance ([816bbb7](https://github.com/indigo-tangerine/itc-aws-base-cfg/commit/816bbb7c26b3dedc9d0462f457bba43a29c22920)) ([#11](https://github.com/indigo-tangerine/itc-aws-base-cfg/pull/11))
+  - refactor workflows, add more compliance rules ([4913a4f](https://github.com/indigo-tangerine/itc-aws-base-cfg/commit/4913a4f54d81279e6a044c789fce39921f721c72)) ([#10](https://github.com/indigo-tangerine/itc-aws-base-cfg/pull/10))
+
+### Bug Fixes
+
+- general:
+  - fix workflow ([cf7170c](https://github.com/indigo-tangerine/itc-aws-base-cfg/commit/cf7170c91ee666ea79f7ccb4fde77f6c6fcb3432))
+
 ## [v0.10.0](https://github.com/indigo-tangerine/itc-aws-base-cfg/releases/tag/v0.10.0) - 2022-04-28 18:59:22
 
 *No description*
