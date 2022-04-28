@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## [v0.9.0](https://github.com/indigo-tangerine/itc-aws-base-cfg/releases/tag/v0.9.0) - 2022-04-28 18:58:34
+
+*No description*
+
 ## [v0.8.0](https://github.com/indigo-tangerine/itc-aws-base-cfg/releases/tag/v0.8.0) - 2022-04-28 18:57:40
 
 *No description*
