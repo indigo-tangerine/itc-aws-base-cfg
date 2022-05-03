@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## [v0.14.0](https://github.com/indigo-tangerine/itc-aws-base-cfg/releases/tag/v0.14.0) - 2022-05-03 19:17:44
+
+*No description*
+
+### Bug Fixes
+
+- general:
+  - compliance fixes ([051b256](https://github.com/indigo-tangerine/itc-aws-base-cfg/commit/051b256f5cef0ef6a2bea62e007f34ffd6860c31)) ([#14](https://github.com/indigo-tangerine/itc-aws-base-cfg/pull/14))
+
 ## [v0.13.0](https://github.com/indigo-tangerine/itc-aws-base-cfg/releases/tag/v0.13.0) - 2022-04-28 20:19:44
 
 *No description*
