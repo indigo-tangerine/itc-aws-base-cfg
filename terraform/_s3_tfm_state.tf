@@ -30,6 +30,7 @@ resource "aws_s3_bucket_public_access_block" "tfm_state" {
   block_public_acls       = true
   block_public_policy     = true
   restrict_public_buckets = true
+  ignore_public_acls      = true
 }
 
 #tfsec:ignore:aws-s3-encryption-customer-key

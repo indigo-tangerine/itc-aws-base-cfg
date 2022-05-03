@@ -22,6 +22,8 @@ resource "aws_s3_bucket_public_access_block" "cloudtrail" {
   block_public_acls       = true
   block_public_policy     = true
   restrict_public_buckets = true
+  ignore_public_acls      = true
+
 }
 
 #tfsec:ignore:aws-s3-encryption-customer-key
@@ -67,8 +69,6 @@ data "aws_iam_policy_document" "cloudtrail_bucket_policy" {
       values   = [aws_cloudtrail.main.arn]
     }
   }
-
-
 }
 
 resource "aws_s3_bucket_policy" "cloudtrail" {

@@ -16,10 +16,6 @@ on:
         type: boolean
 
 env:
-  GITHUB_APP_PEM_FILE: ${{ secrets.TFM_GITHUB_APP_PEM_FILE }}
-  GITHUB_APP_ID: ${{ secrets.TFM_GITHUB_APP_ID }}
-  GITHUB_APP_INSTALLATION_ID: ${{ secrets.TFM_GITHUB_APP_INSTALLATION_ID }}
-
   TFM_DIR: "terraform"
   CFG_DIR: "configuration"
 

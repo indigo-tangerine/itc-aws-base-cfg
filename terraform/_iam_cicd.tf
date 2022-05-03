@@ -69,10 +69,26 @@ resource "aws_iam_access_key" "cicd_automation" {
   user = aws_iam_user.cicd_automation.name
 }
 
-resource "aws_iam_user_policy" "cicd_automation" {
+resource "aws_iam_group_policy" "cicd_automation" {
   name   = "cicd-automation"
-  user   = aws_iam_user.cicd_automation.name
+  group  = aws_iam_group.cicd_automation.name
   policy = data.aws_iam_policy_document.cicd_automation.json
+}
+
+#tfsec:ignore:aws-iam-enforce-mfa
+resource "aws_iam_group" "cicd_automation" {
+  name = "cicd-automation"
+  path = "/users/"
+}
+
+resource "aws_iam_group_membership" "cicd_automation" {
+  name = "cicd-automation"
+
+  users = [
+    aws_iam_user.cicd_automation.name,
+  ]
+
+  group = aws_iam_group.cicd_automation.name
 }
 
 # Github OIDC Provider
