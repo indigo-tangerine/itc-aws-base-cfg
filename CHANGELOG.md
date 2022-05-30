@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## [v0.16.0](https://github.com/indigo-tangerine/itc-aws-base-cfg/releases/tag/v0.16.0) - 2022-05-30 19:43:15
+
+*No description*
+
+### Feature
+
+- general:
+  - md-7 add subdomain to route53 ([0d38d4c](https://github.com/indigo-tangerine/itc-aws-base-cfg/commit/0d38d4c06d9e72a23816302174d711900b3b21ae)) ([#15](https://github.com/indigo-tangerine/itc-aws-base-cfg/pull/15))
+  - md-7 add subdomain to route53 ([26d19c2](https://github.com/indigo-tangerine/itc-aws-base-cfg/commit/26d19c2ad2c31272bb98710394eed78c97588b5e)) ([#15](https://github.com/indigo-tangerine/itc-aws-base-cfg/pull/15))
+
+## [v0.15.0](https://github.com/indigo-tangerine/itc-aws-base-cfg/releases/tag/v0.15.0) - 2022-05-04 19:19:55
+
+*No description*
+
 ## [v0.14.0](https://github.com/indigo-tangerine/itc-aws-base-cfg/releases/tag/v0.14.0) - 2022-05-03 19:17:44
 
 *No description*
