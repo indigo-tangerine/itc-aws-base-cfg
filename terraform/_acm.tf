@@ -26,14 +26,18 @@ resource "aws_acm_certificate_validation" "wildcard" {
   validation_record_fqdns = [for record in aws_route53_record.wildcard_validation : record.fqdn]
 }
 
-# Cognito auth certificate
+# Cognito auth certificate in us-east-1
 
 resource "aws_acm_certificate" "auth" {
-  domain_name       = "*.${aws_route53_zone.dev_itc.name}"
+  provider = aws.use1
+
+  domain_name       = "auth.${aws_route53_zone.dev_itc.name}"
   validation_method = "DNS"
 }
 
 resource "aws_route53_record" "auth_validation" {
+  provider = aws.use1
+
   for_each = {
     for dvo in aws_acm_certificate.auth.domain_validation_options : dvo.domain_name => {
       name   = dvo.resource_record_name
@@ -51,6 +55,8 @@ resource "aws_route53_record" "auth_validation" {
 }
 
 resource "aws_acm_certificate_validation" "auth" {
+  provider = aws.use1
+
   certificate_arn         = aws_acm_certificate.auth.arn
   validation_record_fqdns = [for record in aws_route53_record.auth_validation : record.fqdn]
 }
