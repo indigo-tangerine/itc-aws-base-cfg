@@ -13,4 +13,7 @@ locals {
   cicd_automation_user_name    = "${var.client}-cicd-automation"
   github_actions_role_name     = "${var.client}-github-actions"
   cloudtrail_logging_role_name = "${var.client}-cloudtrail-logs"
+
+  dev_dns_name = "dev.${var.root_dns_domain_name}"
+
 }

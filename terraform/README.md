@@ -18,12 +18,18 @@
 
 ### Modules
 
-No modules.
+| Name | Source | Version |
+|------|--------|---------|
+| <a name="module_cognito_user_pool"></a> [cognito\_user\_pool](#module\_cognito\_user\_pool) | github.com/indigo-tangerine/terraform-aws-itc-cognito-user-pool | v1.1.0 |
 
 ### Resources
 
 | Name | Type |
 |------|------|
+| [aws_acm_certificate.auth](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/acm_certificate) | resource |
+| [aws_acm_certificate.wildcard](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/acm_certificate) | resource |
+| [aws_acm_certificate_validation.auth](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/acm_certificate_validation) | resource |
+| [aws_acm_certificate_validation.wildcard](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/acm_certificate_validation) | resource |
 | [aws_cloudtrail.main](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudtrail) | resource |
 | [aws_cloudwatch_log_group.cloudtrail](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_group) | resource |
 | [aws_cloudwatch_log_metric_filter.cloudtrail](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter) | resource |
@@ -43,6 +49,8 @@ No modules.
 | [aws_iam_service_linked_role.cloudtrail](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_service_linked_role) | resource |
 | [aws_iam_user.cicd_automation](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_user) | resource |
 | [aws_organizations_organization.main](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/organizations_organization) | resource |
+| [aws_route53_record.auth_validation](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route53_record) | resource |
+| [aws_route53_record.wildcard_validation](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route53_record) | resource |
 | [aws_route53_zone.dev_itc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route53_zone) | resource |
 | [aws_s3_account_public_access_block.account](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_account_public_access_block) | resource |
 | [aws_s3_bucket.cloudtrail](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket) | resource |
@@ -72,6 +80,7 @@ No modules.
 | <a name="input_client"></a> [client](#input\_client) | n/a | `string` | n/a | yes |
 | <a name="input_github_actions_session_name"></a> [github\_actions\_session\_name](#input\_github\_actions\_session\_name) | n/a | `string` | `"GitHubActions"` | no |
 | <a name="input_github_org"></a> [github\_org](#input\_github\_org) | n/a | `string` | n/a | yes |
+| <a name="input_root_dns_domain_name"></a> [root\_dns\_domain\_name](#input\_root\_dns\_domain\_name) | n/a | `string` | `"indigo-tangerine.nl"` | no |
 | <a name="input_service"></a> [service](#input\_service) | n/a | `string` | n/a | yes |
 | <a name="input_service_group"></a> [service\_group](#input\_service\_group) | n/a | `string` | `"main"` | no |
 | <a name="input_service_version"></a> [service\_version](#input\_service\_version) | n/a | `string` | `"0.0.0"` | no |

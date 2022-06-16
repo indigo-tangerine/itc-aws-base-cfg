@@ -50,3 +50,8 @@ variable "tfm_state_ddb_table_name" {
   type    = string
   default = "tfm-state-lock"
 }
+
+variable "root_dns_domain_name" {
+  type    = string
+  default = "indigo-tangerine.nl"
+}
