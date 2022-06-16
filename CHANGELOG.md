@@ -1,5 +1,26 @@
 # CHANGELOG
 
+## [v0.18.0](https://github.com/indigo-tangerine/itc-aws-base-cfg/releases/tag/v0.18.0) - 2022-06-16 21:53:53
+
+*No description*
+
+### Feature
+
+- general:
+  - DA-3 add cognito ([f804082](https://github.com/indigo-tangerine/itc-aws-base-cfg/commit/f80408234ffcdf929fd359777f04885ec1cec9f1)) ([#17](https://github.com/indigo-tangerine/itc-aws-base-cfg/pull/17))
+  - DA-3 add cognito ([97fa997](https://github.com/indigo-tangerine/itc-aws-base-cfg/commit/97fa99770bc8eb4fa15c947415e7ec338b8ec558)) ([#17](https://github.com/indigo-tangerine/itc-aws-base-cfg/pull/17))
+
+## [v0.17.0](https://github.com/indigo-tangerine/itc-aws-base-cfg/releases/tag/v0.17.0) - 2022-06-16 18:24:31
+
+*No description*
+
+### Feature
+
+- general:
+  - DA-3 add cognito ([e6be2aa](https://github.com/indigo-tangerine/itc-aws-base-cfg/commit/e6be2aa94ffa624a0a1a167e80dd1f08a3410805)) ([#16](https://github.com/indigo-tangerine/itc-aws-base-cfg/pull/16))
+  - DA3 add cognito ([1110c49](https://github.com/indigo-tangerine/itc-aws-base-cfg/commit/1110c49640de9964232a9d43dd4d44b3af6f0060)) ([#16](https://github.com/indigo-tangerine/itc-aws-base-cfg/pull/16))
+  - add wildcard cert ([2ddc45b](https://github.com/indigo-tangerine/itc-aws-base-cfg/commit/2ddc45b17e50b50ef440f6a99b859f608b969ab8)) ([#16](https://github.com/indigo-tangerine/itc-aws-base-cfg/pull/16))
+
 ## [v0.16.0](https://github.com/indigo-tangerine/itc-aws-base-cfg/releases/tag/v0.16.0) - 2022-05-30 19:43:15
 
 *No description*
