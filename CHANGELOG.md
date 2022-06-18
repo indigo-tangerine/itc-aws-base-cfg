@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## [v0.19.0](https://github.com/indigo-tangerine/itc-aws-base-cfg/releases/tag/v0.19.0) - 2022-06-18 09:25:45
+
+*No description*
+
+### Feature
+
+- general:
+  - DA-3 add cognito secrets ([022dadd](https://github.com/indigo-tangerine/itc-aws-base-cfg/commit/022dadd160578b6d2ee21d9861773a46d5322118)) ([#18](https://github.com/indigo-tangerine/itc-aws-base-cfg/pull/18))
+  - DA-3 add cognito secrets ([4f14c58](https://github.com/indigo-tangerine/itc-aws-base-cfg/commit/4f14c58d6afe5fe54afe458942fdccab3963501e)) ([#18](https://github.com/indigo-tangerine/itc-aws-base-cfg/pull/18))
+
 ## [v0.18.0](https://github.com/indigo-tangerine/itc-aws-base-cfg/releases/tag/v0.18.0) - 2022-06-16 21:53:53
 
 *No description*
