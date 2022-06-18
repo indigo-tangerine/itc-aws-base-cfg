@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## [v0.20.0](https://github.com/indigo-tangerine/itc-aws-base-cfg/releases/tag/v0.20.0) - 2022-06-18 10:13:39
+
+*No description*
+
+### Bug Fixes
+
+- general:
+  - : DA-3 remove mvdb userpool client ([5ea6946](https://github.com/indigo-tangerine/itc-aws-base-cfg/commit/5ea69463a0a1bbbf9798db85de720cbe19bd4e56)) ([#19](https://github.com/indigo-tangerine/itc-aws-base-cfg/pull/19))
+  - : DA-3 remove mvdb userpool client ([3821d72](https://github.com/indigo-tangerine/itc-aws-base-cfg/commit/3821d72e0808360f7644e54232c80076887d5ff7)) ([#19](https://github.com/indigo-tangerine/itc-aws-base-cfg/pull/19))
+
 ## [v0.19.0](https://github.com/indigo-tangerine/itc-aws-base-cfg/releases/tag/v0.19.0) - 2022-06-18 09:25:45
 
 *No description*
