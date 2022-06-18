@@ -29,3 +29,19 @@ resource "aws_route53_record" "dummy" {
   ttl     = "300"
   records = ["1.2.3.4"]
 }
+
+#tfsec:ignore:aws-ssm-secret-use-customer-key
+resource "aws_secretsmanager_secret" "cognito" {
+  name = "${var.client}-cognito"
+}
+
+resource "aws_secretsmanager_secret_version" "cognito" {
+  secret_id     = aws_secretsmanager_secret.cognito.id
+  secret_string = jsonencode(local.cognito)
+}
+
+locals {
+  cognito = {
+    endpoint = aws_cognito_user_pool.main.endpoint
+  }
+}
