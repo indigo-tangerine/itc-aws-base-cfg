@@ -1,5 +1,23 @@
 # CHANGELOG
 
+## [v0.23.0](https://github.com/indigo-tangerine/itc-aws-base-cfg/releases/tag/v0.23.0) - 2022-09-02 18:53:59
+
+*No description*
+
+### Feature
+
+- general:
+  - feat md-2 add iam roles for logging ([228098e](https://github.com/indigo-tangerine/itc-aws-base-cfg/commit/228098eb9df9a747816ae35e952768dadb671b10)) ([#21](https://github.com/indigo-tangerine/itc-aws-base-cfg/pull/21))
+
+## [v0.22.0](https://github.com/indigo-tangerine/itc-aws-base-cfg/releases/tag/v0.22.0) - 2022-06-26 14:25:18
+
+*No description*
+
+### Bug Fixes
+
+- general:
+  - fix badges [skip ci] ([5c026c2](https://github.com/indigo-tangerine/itc-aws-base-cfg/commit/5c026c26f0456f4ae2dc5454af79f5e9c3b46664))
+
 ## [v0.21.0](https://github.com/indigo-tangerine/itc-aws-base-cfg/releases/tag/v0.21.0) - 2022-06-26 14:22:34
 
 *No description*
