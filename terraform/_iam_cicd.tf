@@ -150,5 +150,13 @@ data "aws_iam_policy_document" "cicd_automation" {
     ]
     resources = [aws_dynamodb_table.tfm_state_lock.arn]
   }
+  statement {
+    sid    = "AllowCicdToManageAndPut"
+    effect = "Allow"
+    actions = [
+      "ecr:*"
+    ]
+    resources = ["*"]
+  }
 }
 

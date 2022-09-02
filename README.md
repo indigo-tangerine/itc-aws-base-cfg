@@ -2,6 +2,7 @@
 
 ![CI workflow](https://github.com/indigo-tangerine/itc-aws-base-cfg/actions/workflows/ci-pr.yml/badge.svg)
 ![CD workflow](https://github.com/indigo-tangerine/itc-aws-base-cfg/actions/workflows/cd.yml/badge.svg)
+![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/indigo-tangerine/itc-aws-base-cfg)
 
 ## Resources
 
